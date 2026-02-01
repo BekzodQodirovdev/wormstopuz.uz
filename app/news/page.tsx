@@ -62,7 +62,7 @@ export default function NewsPage() {
           <div className="bg-gray-100 rounded-lg p-6 my-8">
             <div className="flex flex-col md:flex-row gap-6 items-center">
               <img 
-                src="/doctor.jpg" 
+                src="/photos/nodira-doctor.jpg" 
                 alt="Нодира Абдуллаева" 
                 className="w-32 h-32 rounded-full object-cover shadow-lg"
               />
