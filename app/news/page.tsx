@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Header from '../../components/Header'
 import OrderForm from '../../components/OrderForm'
+import NewsTestimonials from '../../components/NewsTestimonials'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -193,95 +194,144 @@ export default function NewsPage() {
               </p>
             </section>
 
-            <section>
-              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
-                Оддий дори воситалари етарли эмас
-              </h2>
-              <p className="text-gray-700 leading-relaxed">
-                Дорихоналарда сотиладиган кўплаб дорилар паразитларни фақат вақтинча фалаж қилади. Улар танадан чиқмайди, ёки фақат айрим турларига таъсир қилади. Шунинг учун сизга организмни тўлиқ тозаловчи, иммунитетни тикловчи ва қайта зарарланишдан ҳимоя қилувчи восита керак.
+            <section className="bg-red-50 border-l-4 border-red-600 p-6 my-8">
+              <h3 className="text-xl font-bold mb-3">Дорихоналар ҳамма вақт ёрдам бера олмайди</h3>
+              <p className="text-gray-700 mb-4">
+                Дорихоналарда сотиладиган кўплаб дорилар паразитларни фақат вақтинча фалаж қилади. Улар танадан чиқмайди, ёки фақат айрим турларига таъсир қилади. Лекин ҳар куни янги турдаги паразитлар пайдо бўлмоқда ва уларни тўлиқ йўқотиш учун комплекс ёндошув керак.
               </p>
-              <p className="text-gray-700 mt-4">
-                Шу сабабли беморларга табиий ва самарали восита – <strong className="text-red-600">Wormstop</strong>ни тавсия қиламиз
+              <p className="text-gray-700">
+                Шунинг учун сизга организмни тўлиқ тозаловчи, иммунитетни тикловчи ва қайта зарарланишдан ҳимоя қилувчи восита керак. Шу сабабли беморларга табиий ва самарали восита – <strong>Wormstop</strong>ни тавсия қиламиз.
               </p>
             </section>
 
             {/* Product Section */}
-            <section className="bg-gradient-to-br from-red-50 to-orange-50 rounded-lg p-8 my-12">
-              <h2 className="text-3xl font-bold text-center mb-6 text-gray-900">
+            <section className="py-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-900 text-center">
                 Паразитларга қарши янги авлод воситаси
               </h2>
-              <div className="text-center">
+              
+              <div className="text-center mb-6">
                 <a href="#contact">
                   <img 
                     src="/product.png" 
                     alt="Wormstop" 
-                    className="mx-auto w-64 mb-6 hover:scale-105 transition-transform"
+                    className="mx-auto w-64 md:w-80"
                   />
                 </a>
+              </div>
+
+              <div className="text-center mb-8">
                 <a 
                   href="#contact" 
-                  className="inline-block bg-red-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition-colors shadow-lg"
+                  className="inline-block bg-red-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 transition-colors"
                 >
                   Буюртма бериш
                 </a>
               </div>
 
-              <div className="mt-8">
-                <p className="font-bold text-lg mb-4">Wormstop бу:</p>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-green-600 mr-2 text-xl">✓</span>
-                    Табиий махсулот, аллергия ва ножўя таъсирларга сабаб бўлмайди
+              <div className="bg-white rounded-lg p-6 shadow-md">
+                <h3 className="text-xl font-bold mb-4">Wormstop бу:</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="text-red-600 text-xl flex-shrink-0">✓</span>
+                    <span className="text-gray-700">Бу табиий маҳсулот, аллергия ва ножўя таъсирларга сабаб бўлмайди</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-green-600 mr-2 text-xl">✓</span>
-                    Барча турдаги паразитлар ва уларнинг тухумларини чиқариб ташлайди
+                  <li className="flex items-start gap-3">
+                    <span className="text-red-600 text-xl flex-shrink-0">✓</span>
+                    <span className="text-gray-700">Барча турдаги паразитлар ва уларнинг тухумларини танадаги барча аъзолардан чиқариб ташлайди</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-green-600 mr-2 text-xl">✓</span>
-                    Папиллома ва бошқа тошмалардан халос қилади
+                  <li className="flex items-start gap-3">
+                    <span className="text-red-600 text-xl flex-shrink-0">✓</span>
+                    <span className="text-gray-700">Папиллома ва бошқа тошмалардан халос қилади</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-green-600 mr-2 text-xl">✓</span>
-                    Иммунитетни мустаҳкамлайди
+                  <li className="flex items-start gap-3">
+                    <span className="text-red-600 text-xl flex-shrink-0">✓</span>
+                    <span className="text-gray-700">Иммунитетни мустаҳкамлайди</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-green-600 mr-2 text-xl">✓</span>
-                    Оғиздаги ёқимсиз ҳидни бартараф этади
+                  <li className="flex items-start gap-3">
+                    <span className="text-red-600 text-xl flex-shrink-0">✓</span>
+                    <span className="text-gray-700">Оғиздаги ёқимсиз ҳидни бартараф этади</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-green-600 mr-2 text-xl">✓</span>
-                    3 ёшдан бошлаб истеъмол қилиш мумкин
+                  <li className="flex items-start gap-3">
+                    <span className="text-red-600 text-xl flex-shrink-0">✓</span>
+                    <span className="text-gray-700">3 ёшдан бошлаб истемол қилиш мумкин</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-red-600 text-xl flex-shrink-0">✓</span>
+                    <span className="text-gray-700">Болалар ва катталар учун хавфсиз ва самарали восита</span>
                   </li>
                 </ul>
+                <p className="mt-6 text-gray-700 font-semibold">
+                  Wormstop нафақат даволайди, балки организмни ҳимоя қилади. Уни профилактика мақсадида ҳам қабул қилиш мумкин.
+                </p>
               </div>
             </section>
 
-            <section className="bg-red-50 border-2 border-red-600 rounded-lg p-6">
-              <h2 className="text-2xl font-bold mb-4 text-red-600 text-center">
-                Фақат бугун — Wormstop учун 77% чегирма!
+            {/* Urgency Section */}
+            <section className="bg-yellow-50 border-2 border-yellow-400 rounded-lg p-6 my-8">
+              <h2 className="text-2xl font-bold mb-4 text-gray-900">
+                Нега айнан ҳозир буюртма бериш керак?
               </h2>
-              <p className="text-gray-700 text-center">
-                Акция муддати чекланган. Бу имкониятни бой берманг!
+              <p className="text-gray-700 mb-6">
+                Паразитлар сиз, фарзандингиз ёки яқинларингиз танасида бўлиши мумкин. Улар ҳар куни кўпаймоқда. Агар ҳозир чора кўрилмаса, уларни йўқотиш кеч бўлиши мумкин. Ва бу жиддий касалликларга олиб келади.
               </p>
+
+              <h3 className="text-xl font-bold mb-4 text-red-700">
+                Фақат бугун — Wormstop учун 77% чегирма!
+              </h3>
+              <p className="text-gray-700 mb-4">
+                Акция муддати чекланган. Бу имкониятни бой берманг. Буюртма бериш учун исм ва телефон рақамни қолдирсангиз кифоя:
+              </p>
+
+              <ol className="list-decimal list-inside space-y-2 text-gray-700 mb-4">
+                <li>Сайтдаги шаклни тўлдиринг</li>
+                <li>Мутахассисимиз сиз билан боғланади</li>
+                <li>Маҳсулот уйингизгача мутлақо бепул етказиб берилади</li>
+                <li>Тўловни фақат товарни олганингиздан кейин амалга оширасиз</li>
+              </ol>
+
+              <div className="bg-white border-2 border-red-500 rounded-lg p-4 text-center">
+                <p className="text-gray-900">
+                  <strong className="text-red-600">Wormstop учун акция фақат бугун!</strong><br />
+                  Оригинал Wormstop препаратига фақат шу расмий сайт орқали буюртма беринг
+                </p>
+              </div>
             </section>
           </div>
         </article>
 
-        {/* Order Section */}
-        <section id="contact" className="py-16 bg-gray-50">
-          <div className="max-w-3xl mx-auto px-4">
+        {/* Order Form */}
+        <section id="contact" className="py-12 bg-gray-50">
+          <div className="max-w-2xl mx-auto px-4">
             <OrderForm />
           </div>
         </section>
 
-        {/* Back Button */}
-        <div className="text-center py-12">
+        {/* Final CTA */}
+        <section className="py-12 bg-gradient-to-r from-red-600 to-red-700">
+          <div className="max-w-4xl mx-auto px-4 text-center text-white">
+            <h2 className="text-3xl font-bold mb-4">
+              Эътиборсиз қолдирманг — бу сизнинг соғлиғингиз ҳақида
+            </h2>
+            <p className="text-xl mb-6">
+              <strong>Wormstop</strong> — бу оддий дори эмас, бу соғлиғингизни ҳимоя қилувчи табиий қалқон. Фарзандларингиз, ўзингиз ва яқинларингиз учун тўғри қарорни қабул қилинг.
+            </p>
+            <p className="text-2xl font-bold">
+              Ҳозироқ ариза қолдиринг. Эрта бўлиб қолмасин.
+            </p>
+          </div>
+        </section>
+
+        {/* Testimonials */}
+        <NewsTestimonials />
+
+        {/* Back to Home */}
+        <div className="text-center py-8 bg-white">
           <Link 
             href="/" 
-            className="inline-block bg-gray-200 text-gray-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
+            className="text-red-600 hover:text-red-700 font-semibold text-lg"
           >
-            Асосий саҳифага қайтиш
+            ← Бош саҳифага қайтиш
           </Link>
         </div>
       </main>
