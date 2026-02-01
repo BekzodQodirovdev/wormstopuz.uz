@@ -1,0 +1,14 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f2ea"/>
+      <stop offset="1" stop-color="#f9e2b1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg2)"/>
+  <rect x="140" y="110" width="920" height="580" rx="36" fill="#fffaf3" stroke="#e6dfd5" stroke-width="4"/>
+  <path d="M420 260C480 210 560 210 600 270C640 210 720 210 780 260C860 340 800 480 600 560C400 480 340 340 420 260Z" fill="#d86a4a" opacity="0.7"/>
+  <circle cx="520" cy="360" r="46" fill="#f3b38f"/>
+  <circle cx="680" cy="360" r="46" fill="#f3b38f"/>
+  <text x="600" y="690" font-family="Georgia, serif" font-size="36" text-anchor="middle" fill="#7d6f63">Сурат 2</text>
+</svg>
