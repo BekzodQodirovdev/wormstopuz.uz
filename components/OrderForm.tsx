@@ -41,12 +41,12 @@ export default function OrderForm() {
   }
 
   return (
-    <div className="bg-gray-100 rounded-lg shadow-lg p-6 md:p-8 relative">
+    <div className="bg-gray-100 rounded-lg shadow-lg p-6 md:p-8 relative overflow-hidden">
       {/* Sale Badge */}
-      <div className="absolute -top-4 -right-4 bg-red-600 text-white rounded-full w-20 h-20 flex items-center justify-center transform rotate-12 shadow-lg">
+      <div className="absolute -top-2 right-2 md:-top-4 md:-right-4 bg-red-600 text-white rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center transform rotate-12 shadow-lg">
         <div className="text-center">
-          <div className="text-2xl font-bold">-77%</div>
-          <div className="text-xs">ЧЕГИРМА</div>
+          <div className="text-lg md:text-2xl font-bold">-77%</div>
+          <div className="text-[8px] md:text-xs">ЧЕГИРМА</div>
         </div>
       </div>
 
