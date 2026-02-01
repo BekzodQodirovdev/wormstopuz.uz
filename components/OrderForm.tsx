@@ -5,8 +5,7 @@ import { useState, useEffect } from 'react'
 export default function OrderForm() {
   const [formData, setFormData] = useState({
     name: '',
-    phone: '+998',
-    region: ''
+    phone: '+998'
   })
   
   const [timer, setTimer] = useState(600) // 10 minutes
@@ -122,28 +121,6 @@ export default function OrderForm() {
             placeholder="+998 XX XXX XX XX"
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
           />
-        </div>
-
-        <div>
-          <label htmlFor="region" className="block text-sm font-medium text-gray-700 mb-1">
-            Давлат
-          </label>
-          <select
-            id="region"
-            name="region"
-            value={formData.region}
-            onChange={handleChange}
-            required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent bg-white"
-          >
-            <option value="">-- Танланг --</option>
-            <option value="UZ">Ўзбекистон</option>
-            <option value="BG">Болгария</option>
-            <option value="CY">Кипр</option>
-            <option value="GR">Греция</option>
-            <option value="IT">Италия</option>
-            <option value="PT">Португалия</option>
-          </select>
         </div>
 
         <button 
