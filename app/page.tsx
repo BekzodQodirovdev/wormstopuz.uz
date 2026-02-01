@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Header from '../components/Header'
 import OrderForm from '../components/OrderForm'
+import Comments from '../components/Comments'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -181,6 +182,9 @@ export default function Home() {
             <OrderForm />
           </div>
         </section>
+
+        {/* Comments Section */}
+        <Comments />
 
         {/* CTA Section */}
         <section className="bg-gradient-to-r from-red-600 to-red-700 py-16">
