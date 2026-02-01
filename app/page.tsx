@@ -86,6 +86,14 @@ export default function Home() {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   — Наиля Тагиева: Сўнгги изланишлар кўрсатишича, ошқозон ва жигар билан муаммолар ҳам оғиздан ёмон ҳид келишига сабаб бўларкан. Олимлар яна шуниям маълум қилишдики, бундай оддий симптомни назар-писанд қилмаслик ярамайди. Паразитлар билан зарарланиш деярли барча оғир касалликларни чақиради.
                 </p>
+                
+                <div className="text-center my-6">
+                  <img 
+                    src="/photos/014.jpg" 
+                    alt="Паразитлар" 
+                    className="mx-auto w-full md:w-3/4 rounded-lg shadow-md"
+                  />
+                </div>
               </div>
 
               <div className="bg-red-50 border-l-4 border-red-600 p-6 my-8">
@@ -101,6 +109,64 @@ export default function Home() {
                 <p className="text-gray-700 leading-relaxed">
                   — Аслини олганда, инсон паразитлари - фақат гижжалар деб ҳисоблаш катта хато. Турли аъзоларда яшайдиган турли-туман паразитлар сони беҳисоб. Қолаверса, гижжалар ҳам, аниқроғи - гельминтлар ўта хавфли. Улар ичакларга шикаст етказиб, уларнинг чиришига ва алал-оқибат ўлимга олиб келади.
                 </p>
+              </div>
+
+              {/* Medical Warning Images Section */}
+              <div className="bg-gray-50 rounded-lg p-6 my-8">
+                <p className="text-center text-gray-700 font-semibold mb-6">
+                  Сурат марказида: одамга чувалчанг-паразитдан ўтган хавфли ўсма ҳужайралари
+                </p>
+                
+                <div className="mb-8 text-center">
+                  <img 
+                    src="/photos/006.jpg" 
+                    alt="Паразит ўсма ҳужайралари" 
+                    className="mx-auto w-full md:w-1/2 rounded-lg shadow-md"
+                  />
+                </div>
+
+                <p className="text-gray-700 text-sm text-center mb-8 italic">
+                  Яна бир кенг тарқалган ҳолат - инсон миясининг паразитлар билан зарарланишидир. Бу эса неврозларга, тез чарчашга, тажангликка ва кайфиятнинг кескин ўзгаришига олиб келади.
+                </p>
+
+                <p className="text-gray-600 text-sm text-center mb-4">
+                  Биз ёришларга оид фотоархив юритяпмиз, бунда аъзолардаги паразитлар аниқланган. <strong className="text-red-600">(Диққат! 18+)</strong>
+                </p>
+
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div>
+                    <p className="text-center font-semibold text-sm mb-3">
+                      Одамнинг олиб ташланган ўт қопидаги чувалчанглар:
+                    </p>
+                    <img 
+                      src="/photos/007.jpg" 
+                      alt="Ўт қопидаги чувалчанглар" 
+                      className="w-full rounded-lg shadow-md"
+                    />
+                  </div>
+
+                  <div>
+                    <p className="text-center font-semibold text-sm mb-3">
+                      Одам бош миясидаги саратон ўсмасини чақирган паразитлар:
+                    </p>
+                    <img 
+                      src="/photos/008.jpg" 
+                      alt="Миядаги паразитлар" 
+                      className="w-full rounded-lg shadow-md"
+                    />
+                  </div>
+
+                  <div>
+                    <p className="text-center font-semibold text-sm mb-3">
+                      Юрак тўхташига олиб келган чувалчанглар:
+                    </p>
+                    <img 
+                      src="/photos/009.jpg" 
+                      alt="Юракдаги чувалчанглар" 
+                      className="w-full rounded-lg shadow-md"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
