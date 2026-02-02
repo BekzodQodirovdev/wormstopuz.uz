@@ -3,6 +3,8 @@ import Header from '../../components/Header'
 import OrderForm from '../../components/OrderForm'
 import NewsTestimonials from '../../components/NewsTestimonials'
 import Link from 'next/link'
+import PromoPopup from '../../components/PromoPopup'
+import FixedBottomCTA from '../../components/FixedBottomCTA'
 
 export const metadata: Metadata = {
   title: 'Гижжалар ва паразитлар — кўзга кўринмас, лекин жуда хавфли душман',
@@ -14,14 +16,13 @@ export default function NewsPage() {
     <>
       <Header />
       
-      <main className="bg-white">
-        {/* Fixed Header Button */}
-        <a 
-          href="#contact" 
-          className="fixed top-4 right-4 z-50 bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors shadow-lg text-sm md:text-base"
-        >
-          Буюртманома қолдириш (-77% чегирма)
-        </a>
+      {/* Promo Popup - shows after 15 seconds */}
+      <PromoPopup />
+      
+      {/* Fixed Bottom CTA - shows after scrolling */}
+      <FixedBottomCTA />
+      
+      <main className="bg-white pb-16">
 
         <article className="max-w-4xl mx-auto px-4 py-12">
           {/* Article Header */}

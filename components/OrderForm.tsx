@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import ProductInfoModal from './ProductInfoModal'
 
 export default function OrderForm() {
   const [formData, setFormData] = useState({
@@ -9,6 +10,7 @@ export default function OrderForm() {
   })
   
   const [timer, setTimer] = useState(600) // 10 minutes
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -56,13 +58,27 @@ export default function OrderForm() {
       </h2>
       
       {/* Product Image */}
-      <div className="text-center mb-6">
-        <img 
-          src="/product.png" 
-          alt="Wormstop" 
-          className="mx-auto w-48 md:w-64"
-        />
+      <div className="text-center mb-4">
+        <button 
+          onClick={() => setIsModalOpen(true)}
+          className="cursor-pointer hover:scale-105 transition-transform focus:outline-none"
+        >
+          <img 
+            src="/product.png" 
+            alt="Wormstop" 
+            className="mx-auto w-48 md:w-64"
+          />
+        </button>
+        <button
+          onClick={() => setIsModalOpen(true)}
+          className="mt-2 text-sm text-red-600 hover:text-red-700 font-medium underline underline-offset-2"
+        >
+          📋 Батафсил маълумот
+        </button>
       </div>
+
+      {/* Product Info Modal */}
+      <ProductInfoModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
       {/* Price Info */}
       <div className="bg-white rounded-lg p-4 mb-6 text-center">
