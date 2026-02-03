@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Header from '../../components/Header'
 import OrderForm from '../../components/OrderForm'
 import NewsTestimonials from '../../components/NewsTestimonials'
+import Certificates from '../../components/Certificates'
 import Link from 'next/link'
 import PromoPopup from '../../components/PromoPopup'
 import FixedBottomCTA from '../../components/FixedBottomCTA'
@@ -42,6 +43,7 @@ export default function NewsPage() {
           <div className="max-w-2xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-8">Мутахассис билан боғланиш</h2>
             <OrderForm />
+            <Certificates className="mt-6" />
           </div>
         </section>
 
@@ -57,6 +59,7 @@ export default function NewsPage() {
             <div className="inline-block bg-white text-blue-700 px-8 py-4 rounded-full font-bold text-xl shadow-lg hover:bg-gray-100 transition-transform hover:scale-105 cursor-pointer">
               <a href="#contact">Ҳозироқ ариза қолдиринг</a>
             </div>
+
           </div>
         </section>
 

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Header from '../components/Header'
 import OrderForm from '../components/OrderForm'
 import Comments from '../components/Comments'
+import Certificates from '../components/Certificates'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -231,6 +232,8 @@ export default function Home() {
                     <img src="/photos/badge_swiss.png" alt="Swiss Quality Formula" className="h-20 w-auto drop-shadow-md hover:scale-105 transition-transform" />
                     <img src="/photos/badge_guarantee.png" alt="100% Quality Guaranteed" className="h-20 w-auto drop-shadow-md hover:scale-105 transition-transform" />
                   </div>
+
+                  <Certificates className="mt-2" />
                 </div>
                 <OrderForm />
               </div>
