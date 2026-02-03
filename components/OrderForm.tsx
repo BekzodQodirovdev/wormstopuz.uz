@@ -90,7 +90,7 @@ export default function OrderForm() {
   return (
     <div className="bg-gray-100 rounded-lg shadow-lg p-6 md:p-8 relative overflow-hidden">
       {/* Sale Badge */}
-      <div className="absolute -top-2 right-2 md:-top-4 md:-right-4 bg-red-600 text-white rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center transform rotate-12 shadow-lg">
+      <div className="absolute -top-2 right-2 md:-top-4 md:-right-4 bg-yellow-400 text-green-800 rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center transform rotate-12 shadow-lg">
         <div className="text-center">
           <div className="text-lg md:text-2xl font-bold">-77%</div>
           <div className="text-[8px] md:text-xs">ЧЕГИРМА</div>
@@ -116,7 +116,7 @@ export default function OrderForm() {
         </button>
         <button
           onClick={() => setIsModalOpen(true)}
-          className="mt-2 text-sm text-red-600 hover:text-red-700 font-medium underline underline-offset-2"
+          className="mt-2 text-sm text-green-600 hover:text-green-700 font-medium underline underline-offset-2"
         >
           📋 Батафсил маълумот
         </button>
@@ -133,7 +133,7 @@ export default function OrderForm() {
         </div>
         <div className="flex justify-between items-center">
           <span className="text-gray-900 font-semibold">Янги нарх:</span>
-          <span className="text-red-600 text-3xl font-bold">24,000 сўм</span>
+          <span className="text-green-600 text-3xl font-bold">24,000 сўм</span>
         </div>
         <p className="text-xs text-yellow-600 mt-2">Кунлик доза</p>
       </div>
@@ -143,7 +143,7 @@ export default function OrderForm() {
         <p className="font-bold mb-2">
           Маҳсулотни олиш учун қолган вақт:
         </p>
-        <div className="text-3xl font-bold text-red-600 tabular-nums">
+        <div className="text-3xl font-bold text-green-600 tabular-nums">
           {formatTime(timer)}
         </div>
       </div>
@@ -162,7 +162,7 @@ export default function OrderForm() {
             onChange={handleChange}
             required
             placeholder="Исмингизни киритинг"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
           />
         </div>
 
@@ -180,7 +180,7 @@ export default function OrderForm() {
             pattern="\+998\d{9}"
             maxLength={13}
             placeholder="+998 XX XXX XX XX"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
           />
         </div>
 
@@ -206,7 +206,7 @@ export default function OrderForm() {
           className={`w-full py-4 rounded-lg text-lg font-bold transition-all shadow-lg uppercase ${
             isSubmitting 
               ? 'bg-gray-400 cursor-not-allowed' 
-              : 'bg-red-600 text-white hover:bg-red-700'
+              : 'bg-green-600 text-white hover:bg-green-700'
           }`}
         >
           {isSubmitting ? (

@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <Header />
       
-      <main className="bg-gray-100 font-sans text-gray-800">
+      <main className="bg-[#f8f9fa] font-sans text-gray-800">
         
         {/* Main Content Layout with Sidebar */}
         <div className="max-w-7xl mx-auto px-4 py-8 md:flex gap-8">
@@ -23,7 +23,7 @@ export default function Home() {
           <div className="md:w-3/4">
             
             {/* Article Header */}
-            <article className="bg-white p-6 md:p-10 shadow-sm rounded-lg mb-8 border-t-4 border-green-600">
+            <article className="bg-white p-6 md:p-10 shadow-sm rounded-xl mb-8 border border-gray-100">
               <div className="flex items-center gap-3 mb-4 text-xs font-bold text-green-700 uppercase tracking-widest">
                 <span className="bg-green-100 px-2 py-1 rounded">Жаҳон Тиббиёти</span>
                 <span>• 2026 ЙОЗГИ МАВСУМ</span>
@@ -54,7 +54,7 @@ export default function Home() {
               <div className="prose prose-lg max-w-none text-gray-800">
                 
                 {/* Q1 */}
-                <p className="font-bold text-green-800 text-xl border-l-4 border-green-600 pl-4 mb-4">
+                <p className="font-bold text-gray-900 text-xl pl-4 mb-4 border-l-4 border-green-500">
                   — Доктор Kamola Yusupova, хуш келибсиз. Нега айнан ҳозир паразитлар мавзуси бунчалик долзарб бўлиб қолди?
                 </p>
                 <p>
@@ -65,24 +65,24 @@ export default function Home() {
                 </p>
 
                 {/* PLACEHOLDER: SHOCKING STATS */}
-                <div className="my-8 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-12 flex flex-col items-center justify-center text-center group hover:border-green-500 transition-colors cursor-pointer" role="region" aria-label="Image placeholder for statistics">
-                  <div className="text-4xl mb-2 text-gray-400 group-hover:text-green-600">📷</div>
-                  <p className="font-bold text-gray-500">Бу ерга статистик график ёки инфографика расмини қўйинг</p>
-                  <p className="text-sm text-gray-400">(Масалан: Дунё харитаси ёки касаллик фоизлари)</p>
+                {/* SHOCKING STATS IMAGE */}
+                <div className="my-8" role="region" aria-label="Statistics showing 92% of deaths linked to parasites">
+                  <img 
+                    src="/photos/stats_graph.png" 
+                    alt="Статистика: 92% ўлим ҳолатлари паразитлар билан боғлиқ" 
+                    className="w-full rounded-lg shadow-md border border-gray-200"
+                  />
+                  <p className="text-center text-sm text-gray-500 mt-2 italic">
+                    Жаҳон соғлиқни сақлаш ташкилотининг сўнгги маълумотлари
+                  </p>
                 </div>
 
                 <p>
                   Агар эътибор берсангиз, ҳозир онкология марказлари тўлиб тошган. Бунинг асл сабаби нима? Ичакда йиллар давомида йиғилиб қолган ва қонга сўрилиб турган паразит токсинлари! Улар ҳужайраларни заҳарлайди ва ўсимталар пайдо бўлишига олиб келади.
                 </p>
 
-                {/* IMG 1: Doctor Context */}
-                <figure className="my-10">
-                  <img src="/photos/kamola_yusupova.jpeg" alt="Kamola Yusupova интервью бермоқда" className="w-full rounded-lg shadow-lg bg-gray-200 h-96 object-cover" />
-                  <figcaption className="text-center text-sm text-gray-500 mt-2 italic">Доктор Kamola Yusupova Женевадаги лабораторияда сўнгги натижаларни кўрсатмоқда</figcaption>
-                </figure>
-
                 {/* Q2 */}
-                <p className="font-bold text-green-800 text-xl border-l-4 border-green-600 pl-4 mb-4">
+                <p className="font-bold text-gray-900 text-xl pl-4 mb-4 border-l-4 border-green-500">
                    — Кўпчилик "паразит" деганда оддий гижжаларни тушунади. Бу қанчалик тўғри?
                 </p>
                 <p>
@@ -93,10 +93,16 @@ export default function Home() {
                 </p>
 
                 {/* PLACEHOLDER: PAPILLOMA EXAMPLES */}
-                <div className="my-8 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-12 flex flex-col items-center justify-center text-center group hover:border-green-500 transition-colors cursor-pointer" role="region" aria-label="Image placeholder for papilloma examples">
-                  <div className="text-4xl mb-2 text-gray-400 group-hover:text-green-600">📷</div>
-                  <p className="font-bold text-gray-500">Бу ерга папилломалар расмини қўйинг</p>
-                  <p className="text-sm text-gray-400">(Ҳақиқий беморларнинг расмлари таъсирчанроқ бўлади)</p>
+                {/* PAPILLOMA EXAMPLES IMAGE */}
+                <div className="my-8" role="region" aria-label="Warning signs: Papillomas on skin">
+                  <img 
+                    src="/photos/papilloma_warning.png" 
+                    alt="Папилломалар — хавфли белги" 
+                    className="w-full rounded-lg shadow-md border border-gray-200"
+                  />
+                  <p className="text-center text-sm text-gray-500 mt-2 italic">
+                    Агар танангизда шундай ўсимталар бўлса, дарҳол чора кўринг!
+                  </p>
                 </div>
 
                 <p>
@@ -104,46 +110,43 @@ export default function Home() {
                 </p>
 
                 {/* Q3 */}
-                <p className="font-bold text-green-800 text-xl border-l-4 border-green-600 pl-4 mb-4">
+                <p className="font-bold text-gray-900 text-xl pl-4 mb-4 border-l-4 border-green-500">
                   — Даҳшат! Хўш, бундан қандай ҳимояланиш мумкин? Дорихоналарда дорилар кўпку? Нега айнан Wormstop ни тавсия қиляпсиз?
                 </p>
                 <p>
                    — Дорихонадаги воситаларга келсак... Уларнинг кўпи эскирган ёки фақат жигарни заҳарлайди. Биз европада аллақачон кимёвий "бомба"лардан воз кечганмиз.
                 </p>
                 <p>
-                  Ҳозирда Женева институти томонидан тасдиқланган ягона самарали восита — бу <strong>Wormstop</strong>.
+                  Ҳозирда Женева институти ва маҳаллий олимлар томонидан тасдиқланган табиий комплекс — бу <strong>Wormstop</strong>.
                 </p>
                 <p>
-                  Бизнинг мақсадимиз бошқа эди. Бизга паразитларни нафақат ўлдирадиган, балки уларни эритиб, танадан чиқариб ташлайдиган ва энг муҳими — тухумларини йўқ қиладиган восита керак эди.
+                  Бизнинг мақсадимиз кимёвий заҳарларсиз, фақат табиий гиёҳлар кучи билан паразитларни йўқ қилиш эди.
                 </p>
                 <p>
                   Ва биз буни уддаладик. <strong>Wormstop</strong> — бу Швейцария ва Ўзбекистон олимларининг ҳамкорликдаги инқилобий ишланмаси.
                 </p>
 
                  {/* PLACEHOLDER: PRODUCT HERO */}
-                 <div className="my-8 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-12 flex flex-col items-center justify-center text-center group hover:border-green-400 transition-colors cursor-pointer">
-                  <div className="text-4xl mb-2 text-gray-400 group-hover:text-green-500">📦</div>
-                  <p className="font-bold text-gray-500">Бу ерга Wormstop маҳсулотининг чиройли расмини қўйинг</p>
-                </div>
+                 {/* Product Image removed as per request - Text content updated below */}
                 
                 <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-xl border border-green-200 my-8 shadow-sm">
                   <h3 className="font-extrabold text-2xl text-green-800 mb-4 text-center">Wormstop нега бунчалик самарали?</h3>
                   <ul className="space-y-4 text-lg">
                     <li className="flex items-start gap-3">
                         <span className="flex-shrink-0 bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold">✓</span>
-                        <span><strong>3 босқичли тозалаш:</strong> Ичаклар, жигар ва қонни паразитлардан тўлиқ тозалайди.</span>
+                        <span><strong>Кучли таркиб:</strong> Саримсоқ пиёз, Қовоқ уруғлари, Тансий ўти, Аччиқ шувоқ ва Сабзи экстрактлари.</span>
                     </li>
                     <li className="flex items-start gap-3">
                         <span className="flex-shrink-0 bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold">✓</span>
-                        <span><strong>Тухумларни йўқ қилади:</strong> Паразитлар қайта кўпаймаслиги учун уларнинг уясини бузади.</span>
+                        <span><strong>Фаллажлайди ва ҳайдайди:</strong> Қовоқ ва Тансий паразитларни фалажлайди, ичаклар перисталтикаси эса уларни ташқарига чиқариб ташлайди.</span>
                     </li>
                     <li className="flex items-start gap-3">
                         <span className="flex-shrink-0 bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold">✓</span>
-                        <span><strong>100% Табиий:</strong> Таркиби фақат тоғ гиёҳлари ва ноёб ўсимлик экстрактларидан иборат. Химия йўқ!</span>
+                        <span><strong>Тухум қобиғини бузади:</strong> Саримсоқ таркибидаги аллитсин ва шувоқ паразит тухумларини йўқ қилади.</span>
                     </li>
                     <li className="flex items-start gap-3">
                         <span className="flex-shrink-0 bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold">✓</span>
-                        <span><strong>Энергия ва гўзаллик:</strong> 1 курсдан сўнг юз ранги тиниқлашади, папилломалар тўкилади, одам ўзини 10 ёшга ёшаргандек ҳис қилади.</span>
+                        <span><strong>Витамин ва Иммунитет:</strong> Сабзи концентрати (B, D витаминлари) организмни тиклайди, соч ва тирноқларни мустаҳкамлайди.</span>
                     </li>
                   </ul>
                 </div>
@@ -184,13 +187,20 @@ export default function Home() {
                 </div>
 
                 {/* PLACEHOLDER: MORE RESULTS */}
-                <div className="my-8 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-12 flex flex-col items-center justify-center text-center group hover:border-green-500 transition-colors cursor-pointer" role="region" aria-label="Image placeholder for additional results">
-                  <div className="text-4xl mb-2 text-gray-400 group-hover:text-green-600">✨</div>
-                  <p className="font-bold text-gray-500">Бу ерга яна бошқа натижалар ёки мижозлар изоҳлари скриншотини қўйинг</p>
+                {/* SOCIAL PROOF / REVIEWS IMAGE */}
+                <div className="my-8" role="region" aria-label="Positive customer reviews">
+                  <img 
+                    src="/photos/social_proof.png" 
+                    alt="Мижозларнинг ижобий фикрлари" 
+                    className="w-full rounded-lg shadow-md border border-gray-200"
+                  />
+                  <p className="text-center text-sm text-gray-500 mt-2 italic">
+                    Бизнинг мижозларимиз натижалардан мамнун
+                  </p>
                 </div>
 
 
-                <p className="font-bold text-green-800 text-xl border-l-4 border-green-600 pl-4 mb-4">
+                <p className="font-bold text-gray-900 text-xl pl-4 mb-4 border-l-4 border-green-500">
                   — Wormstop'ни қаердан олиш мумкин? Уни Ўзбекистонда топиш қийин деб эшитдим.
                 </p>
                 <p>
@@ -200,8 +210,8 @@ export default function Home() {
                   Лекин биз халқ учун ҳаракат қилдик. Махсус давлат дастури доирасида биз чекланган партияни олиб келдик.
                 </p>
                 
-                <div className="bg-green-50 border-l-8 border-green-600 p-6 my-8">
-                   <h4 className="text-green-800 font-bold text-xl mb-2">ШОШИЛИНГ! ОМБОРДА ОЗ ҚОЛДИ!</h4>
+                <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 my-8">
+                   <h4 className="text-red-700 font-bold text-xl mb-2">⚠ ШОШИЛИНГ! ОМБОРДА ОЗ ҚОЛДИ!</h4>
                    <p className="text-gray-800">
                      Ҳозирда талаб жуда юқори. Ҳар соатда 100 дан ортиқ буюртма тушмоқда. Агар соғлиғингиз сиз учун муҳим бўлса, ҳозироқ ҳаракат қилинг.
                    </p>
@@ -214,10 +224,16 @@ export default function Home() {
               </div>
               
               {/* ORDER FORM IN ARTICLE */}
-              <div id="order" className="mt-12 container mx-auto bg-gray-50 rounded-xl p-4 md:p-8 border-2 border-dashed border-green-400" role="region" aria-labelledby="order-form-heading">
+              <div id="order" className="mt-12 container mx-auto bg-white rounded-xl p-4 md:p-8 border border-gray-200 shadow-sm" role="region" aria-labelledby="order-form-heading">
                 <div className="text-center mb-6">
                   <h3 id="order-form-heading" className="text-2xl font-bold text-green-700">РАСМИЙ БУЮРТМА ОЙНАСИ</h3>
                   <p className="text-sm text-gray-600">Швейцария сифати. Ўзбекистон бўйлаб етказиб бериш.</p>
+                  
+                  {/* Trust Badges */}
+                  <div className="flex justify-center gap-6 my-6">
+                    <img src="/photos/badge_swiss.png" alt="Swiss Quality Formula" className="h-20 w-auto drop-shadow-md hover:scale-105 transition-transform" />
+                    <img src="/photos/badge_guarantee.png" alt="100% Quality Guaranteed" className="h-20 w-auto drop-shadow-md hover:scale-105 transition-transform" />
+                  </div>
                 </div>
                 <OrderForm />
               </div>
@@ -231,7 +247,7 @@ export default function Home() {
 
 
           {/* RIGHT COLUMN: Sidebar (Desktop) */}
-          <aside className="hidden md:block w-1/4 space-y-8">
+          <aside className="hidden md:block w-1/4 space-y-8 sticky top-24 self-start h-fit">
             
             {/* Author Card */}
             <div className="bg-white p-6 shadow-sm rounded-lg border">

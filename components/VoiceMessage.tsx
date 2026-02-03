@@ -16,14 +16,32 @@ export default function VoiceMessage({ src, duration = "0:30" }: VoiceMessagePro
   // We use a fixed seed-like pattern so it looks consistent but "audio-like"
   const [bars, setBars] = useState<number[]>([])
 
+  // Calculate width based on duration
+  const [width, setWidth] = useState<string>("220px") // Default mobile width
+
   useEffect(() => {
-    // Generate ~25 bars (reduced for mobile fit) with varying heights
-    const newBars = Array.from({ length: 25 }, () => {
-      // Logic for "Telegram-like" shape: some high, some low, grouped together
+    // Parse duration "MM:SS" to seconds
+    const [mins, secs] = duration.split(':').map(Number)
+    const totalSeconds = (mins || 0) * 60 + (secs || 0)
+    
+    // Telegram-style scaling:
+    // Min width ~180px, Max width ~360px
+    // Scale factor: roughly 3-4px per second, but logarithmic-ish or capped
+    let calculatedWidth = 180 + (totalSeconds * 4)
+    if (calculatedWidth > 320) calculatedWidth = 320 // Max width
+    
+    // Allow slightly larger on desktop?
+    // Let's just set a style width that max-width CSS classes will constrain if needed
+    setWidth(`${calculatedWidth}px`)
+
+    // Generate bars - more bars for wider player
+    const barCount = Math.floor(calculatedWidth / 6) // approx 6px per bar (width + gap)
+    const newBars = Array.from({ length: barCount }, () => {
+      // Logic for "Telegram-like" shape: random heights
       return Math.max(20, Math.random() * 100) 
     })
     setBars(newBars)
-  }, [])
+  }, [duration])
 
   useEffect(() => {
     const audio = audioRef.current
@@ -62,7 +80,10 @@ export default function VoiceMessage({ src, duration = "0:30" }: VoiceMessagePro
   }
 
   return (
-    <div className="flex items-center gap-2 md:gap-3 bg-gray-100 rounded-full p-1.5 md:p-2 pr-3 w-full max-w-[220px] md:max-w-sm">
+    <div 
+      className="flex items-center gap-2 md:gap-3 bg-gray-100 rounded-full p-1.5 md:p-2 pr-3 transition-all duration-300 ease-out"
+      style={{ width: width, maxWidth: '100%' }} // Apply calculated width
+    >
       <audio ref={audioRef} src={src} preload="metadata" />
       
       {/* Play/Pause Button */}
