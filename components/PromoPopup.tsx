@@ -52,13 +52,14 @@ export default function PromoPopup() {
       
       {/* Modal Content */}
       <div 
-        className="relative bg-gradient-to-br from-red-600 via-red-700 to-red-800 rounded-2xl max-w-md w-full shadow-2xl border border-red-400/30 animate-scaleIn overflow-hidden"
+        className="relative bg-gradient-to-br from-green-600 via-green-700 to-green-800 rounded-2xl max-w-md w-full shadow-2xl border border-green-400/30 animate-scaleIn overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button 
           onClick={handleClose}
           className="absolute top-3 right-3 text-white/70 hover:text-white transition-colors z-10 bg-black/20 rounded-full p-1"
+          aria-label="Close popup"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -72,7 +73,7 @@ export default function PromoPopup() {
         {/* Content */}
         <div className="relative p-6 text-center text-white">
           {/* Badge */}
-          <div className="inline-block bg-yellow-400 text-red-800 px-4 py-1 rounded-full text-sm font-bold mb-4 animate-pulse">
+          <div className="inline-block bg-yellow-400 text-green-800 px-4 py-1 rounded-full text-sm font-bold mb-4 animate-pulse">
             🔥 ЧЕКЛАНГАН ТАКЛИФ
           </div>
 
@@ -101,7 +102,7 @@ export default function PromoPopup() {
           <a 
             href="#contact"
             onClick={handleClose}
-            className="block w-full bg-yellow-400 hover:bg-yellow-300 text-red-800 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl transform hover:scale-[1.02]"
+            className="block w-full bg-yellow-400 hover:bg-yellow-300 text-green-800 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl transform hover:scale-[1.02]"
           >
             Ҳозироқ буюртма бериш →
           </a>
