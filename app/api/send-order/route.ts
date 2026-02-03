@@ -42,7 +42,6 @@ export async function POST(request: NextRequest) {
     })}
 
 💰 <b>Narx:</b> 24,000 сўм
-🎁 <b>Chegirma:</b> -77%
     `.trim()
 
     // Send message to Telegram

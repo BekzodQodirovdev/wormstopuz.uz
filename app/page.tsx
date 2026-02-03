@@ -26,19 +26,16 @@ export default function Home() {
             <article className="bg-white p-6 md:p-10 shadow-sm rounded-xl mb-8 border border-gray-100">
               <div className="flex items-center gap-3 mb-4 text-xs font-bold text-green-700 uppercase tracking-widest">
                 <span className="bg-green-100 px-2 py-1 rounded">Жаҳон Тиббиёти</span>
-                <span>• 2026 ЙОЗГИ МАВСУМ</span>
-                <span className="ml-auto text-gray-400">🕒 5 дақиқалик ўқиш</span>
               </div>
 
               <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
-                "ПАПИЛЛОМАЛАР — БУ ЎЛИМ БЕЛГИСИ!" — ШВЕЙЦАРИЯЛИК ОЛИМ ДАҲШАТЛИ ҲАҚИҚАТНИ ОШКОР ҚИЛДИ
+                "ПАПИЛЛОМАЛАР — БУ ЎЛИМ БЕЛГИСИ!" — РОССИЯЛИК ОЛИМ ДАҲШАТЛИ ҲАҚИҚАТНИ ОШКОР ҚИЛДИ
               </h1>
               
               <div className="flex items-center gap-4 mb-8 border-b pb-6">
                 <img src="/photos/kamola_yusupova.jpeg" alt="Author" className="w-12 h-12 rounded-full border-2 border-green-500 p-0.5 object-cover bg-gray-200" />
                 <div>
                   <p className="font-bold text-gray-900 text-sm">Kamola Yusupova</p>
-                  <p className="text-xs text-gray-500">Женева Паразитология Институти</p>
                 </div>
               </div>
 
@@ -293,7 +290,7 @@ export default function Home() {
         {/* Mobile Sticky CTA */}
         <div className="fixed bottom-0 left-0 right-0 bg-white border-t p-3 md:hidden z-50 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] flex items-center justify-between">
             <div className="text-xs">
-              <div className="font-bold text-green-700">СКИДКА -50%</div>
+              <div className="font-bold text-green-700">22.000 сўм</div>
               <div className="text-gray-500">Шошилинг!</div>
             </div>
            <a href="#order" className="bg-green-600 hover:bg-green-700 text-white px-8 py-2 rounded-full font-bold shadow-lg transition-colors" aria-label="Order now">

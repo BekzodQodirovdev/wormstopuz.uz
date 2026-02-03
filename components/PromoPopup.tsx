@@ -81,17 +81,13 @@ export default function PromoPopup() {
             Фақат бугун!
           </h2>
           
-          <div className="text-4xl sm:text-5xl md:text-6xl font-black mb-1 sm:mb-2 text-yellow-300 drop-shadow-lg">
-            -77%
-          </div>
-          
           <p className="text-sm sm:text-lg mb-2 text-white/90">
             WORMSTOP учун махсус чегирма
           </p>
 
           <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4 flex-wrap">
-            <span className="text-white/60 line-through text-sm sm:text-lg">104,348 сўм</span>
-            <span className="text-xl sm:text-2xl font-bold text-yellow-300">24,000 сўм</span>
+            <span className="text-white/70 line-through text-sm sm:text-lg">99.000 сўм</span>
+            <span className="text-xl sm:text-2xl font-bold text-yellow-300">22.000 сўм</span>
           </div>
 
           <p className="text-xs sm:text-sm text-white/80 mb-4 sm:mb-6 px-2">

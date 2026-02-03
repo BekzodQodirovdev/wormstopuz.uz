@@ -91,9 +91,9 @@ export default function OrderForm() {
     <div className="bg-gray-100 rounded-lg shadow-lg p-6 md:p-8 relative overflow-hidden">
       {/* Sale Badge */}
       <div className="absolute -top-2 right-2 md:-top-4 md:-right-4 bg-yellow-400 text-green-800 rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center transform rotate-12 shadow-lg">
-        <div className="text-center">
-          <div className="text-lg md:text-2xl font-bold">-77%</div>
-          <div className="text-[8px] md:text-xs">ЧЕГИРМА</div>
+        <div className="text-center leading-tight">
+          <div className="text-[10px] md:text-xs line-through text-green-900/70">99.000 сўм</div>
+          <div className="text-sm md:text-base font-bold">22.000 сўм</div>
         </div>
       </div>
 
@@ -129,11 +129,11 @@ export default function OrderForm() {
       <div className="bg-white rounded-lg p-4 mb-6 text-center">
         <div className="flex justify-between items-center mb-2">
           <span className="text-gray-600">Эски нарх:</span>
-          <span className="text-gray-400 line-through text-lg">104, 348 сўм</span>
+          <span className="text-gray-400 line-through text-lg">99.000 сўм</span>
         </div>
         <div className="flex justify-between items-center">
           <span className="text-gray-900 font-semibold">Янги нарх:</span>
-          <span className="text-green-600 text-3xl font-bold">24,000 сўм</span>
+          <span className="text-green-600 text-3xl font-bold">22.000 сўм</span>
         </div>
         <p className="text-xs text-yellow-600 mt-2">Кунлик доза</p>
       </div>

@@ -52,7 +52,7 @@ export default function NewsPage() {
               Эътиборсиз қолдирманг — бу сизнинг соғлиғингиз ҳақида
             </h2>
             <p className="text-xl md:text-2xl mb-8 leading-relaxed opacity-90">
-              <strong>Wormstop</strong> — бу оддий дори эмас, бу соғлиғингизни ҳимоя қилувчи табиий қалқон. Фарзандларингиз, ўзингиз ва яқинларингиз учун тўғри қарорни қабул қилинг.
+              <strong>Wormstop</strong> — Бу оддий маҳсулот эмас, бу соғлиғингизни ҳимоя қилувчи табиий қалқон. Фарзандларингиз, ўзингиз ва яқинларингиз учун тўғри қарорни қабул қилинг.
             </p>
             <div className="inline-block bg-white text-blue-700 px-8 py-4 rounded-full font-bold text-xl shadow-lg hover:bg-gray-100 transition-transform hover:scale-105 cursor-pointer">
               <a href="#contact">Ҳозироқ ариза қолдиринг</a>

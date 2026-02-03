@@ -29,16 +29,13 @@ export default function FixedBottomCTA() {
       <div className="absolute -top-6 left-0 right-0 h-6 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
       
       {/* Main CTA bar */}
-      <div className="bg-gradient-to-r from-green-600 via-green-500 to-green-600 px-4 py-3 shadow-[0_-4px_20px_rgba(0,0,0,0.3)]">
-        <div className="max-w-md mx-auto flex items-center justify-between gap-3">
+      <div className="bg-gradient-to-r from-green-600 via-green-500 to-green-600 py-3 shadow-[0_-4px_20px_rgba(0,0,0,0.3)]">
+        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
           {/* Left side - Price info */}
           <div className="text-white text-sm">
             <div className="flex items-center gap-2">
-              <span className="bg-yellow-400 text-green-800 px-2 py-0.5 rounded text-xs font-bold">
-                -77%
-              </span>
-              <span className="line-through text-white/60 text-xs hidden sm:inline">104,348</span>
-              <span className="font-bold">24,000 сўм</span>
+              <span className="line-through text-white hidden sm:inline">99.000 сўм</span>
+              <span className="font-bold">22.000 сўм</span>
             </div>
           </div>
           
