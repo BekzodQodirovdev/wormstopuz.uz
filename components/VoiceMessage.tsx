@@ -24,14 +24,12 @@ export default function VoiceMessage({ src, duration = "0:30" }: VoiceMessagePro
     const [mins, secs] = duration.split(':').map(Number)
     const totalSeconds = (mins || 0) * 60 + (secs || 0)
     
-    // Telegram-style scaling:
-    // Min width ~180px, Max width ~360px
-    // Scale factor: roughly 3-4px per second, but logarithmic-ish or capped
-    let calculatedWidth = 180 + (totalSeconds * 4)
-    if (calculatedWidth > 320) calculatedWidth = 320 // Max width
+    // Mobile-first scaling:
+    // Min width ~140px, Max width ~220px to fit mobile screens with avatar
+    // Scale factor: roughly 2.5px per second
+    let calculatedWidth = 140 + (totalSeconds * 2.5)
+    if (calculatedWidth > 220) calculatedWidth = 220 // Max width capped for mobile fit
     
-    // Allow slightly larger on desktop?
-    // Let's just set a style width that max-width CSS classes will constrain if needed
     setWidth(`${calculatedWidth}px`)
 
     // Generate bars - more bars for wider player
@@ -81,8 +79,8 @@ export default function VoiceMessage({ src, duration = "0:30" }: VoiceMessagePro
 
   return (
     <div 
-      className="flex items-center gap-2 md:gap-3 bg-gray-100 rounded-full p-1.5 md:p-2 pr-3 transition-all duration-300 ease-out"
-      style={{ width: width, maxWidth: '100%' }} // Apply calculated width
+      className="inline-flex items-center gap-2 md:gap-3 bg-gray-100 rounded-full p-1.5 md:p-2 pr-3 transition-all duration-300 ease-out"
+      style={{ width: '100%', maxWidth: width }}
     >
       <audio ref={audioRef} src={src} preload="metadata" />
       

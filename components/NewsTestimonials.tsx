@@ -51,7 +51,7 @@ export default function NewsTestimonials() {
   ]
 
   return (
-    <section id="reviews" className="py-12 bg-white">
+    <section id="reviews" className="py-12 bg-white overflow-x-hidden">
       <div className="max-w-5xl mx-auto px-4">
         {/* Header */}
         <div className="mb-8">
@@ -66,33 +66,33 @@ export default function NewsTestimonials() {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index} 
-              className="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:shadow-lg transition-shadow"
+              className="bg-gray-50 rounded-lg p-4 md:p-6 border border-gray-200 hover:shadow-lg transition-shadow overflow-hidden"
             >
-              <div className="flex gap-4">
+              <div className="flex gap-3 md:gap-4">
                 {/* Avatar */}
                 <div className="flex-shrink-0">
                   <img 
                     src={testimonial.avatar} 
                     alt={testimonial.name}
-                    className="w-16 h-16 rounded-full object-cover border-2 border-green-100"
+                    className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover border-2 border-green-100"
                   />
                 </div>
 
                 {/* Content */}
-                <div className="flex-1">
-                  <h3 className="font-bold text-lg text-gray-900 mb-3">
+                <div className="flex-1 min-w-0 overflow-hidden">
+                  <h3 className="font-bold text-base md:text-lg text-gray-900 mb-2 md:mb-3">
                     {testimonial.name}
                   </h3>
 
                   {/* Audio Player - Using VoiceMessage Component */}
                   {testimonial.audio && (
-                    <div className="mb-4">
+                    <div className="mb-3 md:mb-4 max-w-full overflow-hidden">
                       <VoiceMessage src={testimonial.audio} duration={testimonial.duration || "0:30"} />
                     </div>
                   )}
 
                   {/* Text */}
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-sm md:text-base text-gray-700 leading-relaxed break-words overflow-wrap-anywhere">
                     {testimonial.text}
                   </p>
                 </div>
