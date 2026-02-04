@@ -1,9 +1,13 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useSearchParams } from 'next/navigation'
 import ProductInfoModal from './ProductInfoModal'
 
 export default function OrderForm() {
+  const searchParams = useSearchParams()
+  const stopValue = searchParams.get('stop') // Get ?stop=1 from URL
+
   const [formData, setFormData] = useState({
     name: '',
     phone: '+998'
@@ -44,6 +48,7 @@ export default function OrderForm() {
         body: JSON.stringify({
           name: formData.name,
           phone: formData.phone,
+          stop: stopValue, // Send stop value to API
         }),
       })
 

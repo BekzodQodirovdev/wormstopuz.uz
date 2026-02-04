@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server'
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { name, phone } = body
+    const { name, phone, stop } = body
 
     // Validate input
     if (!name || !phone) {
@@ -26,12 +26,18 @@ export async function POST(request: NextRequest) {
     }
 
     // Format message for Telegram
-    const message = `
+    let message = `
 🔔 <b>YANGI BUYURTMA - WORMSTOP</b>
 
 👤 <b>Ism:</b> ${name}
 📱 <b>Telefon:</b> ${phone}
+`.trim()
 
+    if (stop) {
+      message += `\n🛑 <b>Belgi:</b> ${stop}`
+    }
+
+    message += `\n
 📅 <b>Vaqt:</b> ${new Date().toLocaleString('uz-UZ', { 
       timeZone: 'Asia/Tashkent',
       year: 'numeric',
