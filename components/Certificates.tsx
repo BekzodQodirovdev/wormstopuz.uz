@@ -13,13 +13,15 @@ export default function Certificates({ variant = 'light', className = '' }: { va
     <div className={`flex flex-col items-center gap-3 w-full ${className}`}>
       <p className={`text-sm font-semibold ${labelClass}`}>Сертификатлар</p>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-2xl">
+      <div className="grid grid-cols-2 gap-3 w-full max-w-2xl">
         {certificates.map((cert) => (
-          <div key={cert.id} className="relative w-full h-60 bg-gray-100 rounded-lg overflow-hidden border border-gray-200 shadow-sm group">
+          <div key={cert.id} className="relative aspect-[3/4] w-full bg-gray-100 rounded-lg overflow-hidden border border-gray-200 shadow-sm group">
             <iframe
               src={`${cert.href}#toolbar=0&navpanes=0&scrollbar=0&view=Fit`}
               title={cert.label}
-              className="w-full h-full"
+              className="absolute inset-0 w-full h-full"
+              style={{ border: 'none', overflow: 'hidden' }}
+              scrolling="no"
               loading="lazy"
             />
             {/* Optional: Overlay to allow clicking to open in full if needed, or just let them read directly */}
