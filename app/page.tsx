@@ -129,7 +129,7 @@ export default function Home() {
                   <ul className="space-y-4 text-lg">
                     <li className="flex items-start gap-3">
                         <span className="flex-shrink-0 bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold">✓</span>
-                        <span><strong>Кучли таркиб:</strong> Саримсоқ пиёз, Қовоқ уруғлари, Тансий ўти, Аччиқ шувоқ ва Сабзи экстрактлари.</span>
+                        <span><strong>Кучли таркиб:</strong> Саримсоқ пиёз, Қовоқ уруғлари, Тансий ўти, Аччиқ шувоқ ва Сабзи қуруқ концентратлари.</span>
                     </li>
                     <li className="flex items-start gap-3">
                         <span className="flex-shrink-0 bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold">✓</span>

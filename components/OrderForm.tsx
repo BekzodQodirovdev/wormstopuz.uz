@@ -135,7 +135,6 @@ export default function OrderForm() {
           <span className="text-gray-900 font-semibold">Янги нарх:</span>
           <span className="text-green-600 text-3xl font-bold">22.000 сўм</span>
         </div>
-        <p className="text-xs text-yellow-600 mt-2">Кунлик доза</p>
       </div>
 
       {/* Timer */}
