@@ -7,6 +7,7 @@ import Link from 'next/link'
 import PromoPopup from '../../components/PromoPopup'
 import FixedBottomCTA from '../../components/FixedBottomCTA'
 import { StickyScrollWrapper } from '../../components/story/StickyScrollWrapper'
+import { Suspense } from 'react'
 
 export const metadata: Metadata = {
   title: 'Гижжалар ва паразитлар — кўзга кўринмас, лекин жуда хавфли душман',
@@ -42,7 +43,9 @@ export default function NewsPage() {
         <section id="contact" className="py-12 bg-gray-50 border-t border-gray-200">
           <div className="max-w-2xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-8">Мутахассис билан боғланиш</h2>
-            <OrderForm />
+            <Suspense fallback={<div className="h-96 bg-gray-50 rounded-lg animate-pulse" />}>
+              <OrderForm />
+            </Suspense>
             <Certificates className="mt-6" />
           </div>
         </section>

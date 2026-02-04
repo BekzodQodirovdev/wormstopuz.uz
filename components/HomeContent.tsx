@@ -3,6 +3,7 @@ import OrderForm from './OrderForm'
 import Comments from './Comments'
 import Certificates from './Certificates'
 import Link from 'next/link'
+import { Suspense } from 'react'
 
 export default function HomeContent() {
   return (
@@ -226,7 +227,9 @@ export default function HomeContent() {
 
                   <Certificates className="mt-2" />
                 </div>
-                <OrderForm />
+                <Suspense fallback={<div className="h-96 bg-gray-50 rounded-lg animate-pulse" />}>
+                  <OrderForm />
+                </Suspense>
               </div>
 
             </article>

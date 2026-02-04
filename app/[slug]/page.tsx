@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import HomeContent from '../../components/HomeContent'
 import StopSaver from '../../components/StopSaver'
 
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'Wormstop - Дунёвий Паразитология Маркази',
   description: 'Шошилинч хабар: Паразитлардан бутунлай халос қилувчи янги восита.',
