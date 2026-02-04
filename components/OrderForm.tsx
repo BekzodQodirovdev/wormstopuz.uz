@@ -6,7 +6,7 @@ import ProductInfoModal from './ProductInfoModal'
 
 export default function OrderForm() {
   const searchParams = useSearchParams()
-  const stopValue = searchParams.get('stop') // Get ?stop=1 from URL
+  const queryStopParam = searchParams.get('stop') // Get ?stop=1 from URL
 
   const [formData, setFormData] = useState({
     name: '',
@@ -20,6 +20,13 @@ export default function OrderForm() {
     type: 'success' | 'error' | null
     message: string
   }>({ type: null, message: '' })
+
+  useEffect(() => {
+    // Save stop param to localStorage if present in URL
+    if (queryStopParam) {
+      localStorage.setItem('wormstop_stop_param', queryStopParam)
+    }
+  }, [queryStopParam])
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -39,6 +46,10 @@ export default function OrderForm() {
     setIsSubmitting(true)
     setSubmitStatus({ type: null, message: '' })
 
+    // Get stop value from URL or localStorage
+    const storedStop = localStorage.getItem('wormstop_stop_param')
+    const finalStop = queryStopParam || storedStop
+
     try {
       const response = await fetch('/api/send-order', {
         method: 'POST',
@@ -48,7 +59,7 @@ export default function OrderForm() {
         body: JSON.stringify({
           name: formData.name,
           phone: formData.phone,
-          stop: stopValue, // Send stop value to API
+          stop: finalStop, // Send stop value (from URL or storage)
         }),
       })
 

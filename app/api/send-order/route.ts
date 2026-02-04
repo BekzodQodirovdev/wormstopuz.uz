@@ -27,8 +27,6 @@ export async function POST(request: NextRequest) {
 
     // Format message for Telegram
     let message = `
-🔔 <b>YANGI BUYURTMA - WORMSTOP</b>
-
 👤 <b>Ism:</b> ${name}
 📱 <b>Telefon:</b> ${phone}
 `.trim()
@@ -37,16 +35,17 @@ export async function POST(request: NextRequest) {
       message += `\n🛑 <b>Belgi:</b> ${stop}`
     }
 
-    message += `\n
-📅 <b>Vaqt:</b> ${new Date().toLocaleString('uz-UZ', { 
-      timeZone: 'Asia/Tashkent',
-      year: 'numeric',
-      month: '2-digit',
-      day: '2-digit',
-      hour: '2-digit',
-      minute: '2-digit'
-    })}
-    `.trim()
+
+//     message += `
+// 📅 <b>Vaqt:</b> ${new Date().toLocaleString('uz-UZ', { 
+//       timeZone: 'Asia/Tashkent',
+//       year: 'numeric',
+//       month: '2-digit',
+//       day: '2-digit',
+//       hour: '2-digit',
+//       minute: '2-digit'
+//     })}
+//     `.trim()
 
     // Send message to Telegram
     const telegramApiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`
