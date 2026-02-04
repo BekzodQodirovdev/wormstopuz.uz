@@ -27,12 +27,12 @@ export async function POST(request: NextRequest) {
 
     // Format message for Telegram
     let message = `
-👤 <b>Ism:</b> ${name}
-📱 <b>Telefon:</b> ${phone}
-`.trim()
+<b>Имя:</b> ${name}
+<b>Номер:</b> ${phone}
+<b>Продукт:</b> Wormstop`.trim()
 
     if (stop) {
-      message += `\n🛑 <b>Belgi:</b> ${stop}`
+      message += `\n<b>Знак:</b> ${stop}`
     }
 
 
