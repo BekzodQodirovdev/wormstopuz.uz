@@ -40,8 +40,6 @@ export async function POST(request: NextRequest) {
       hour: '2-digit',
       minute: '2-digit'
     })}
-
-💰 <b>Narx:</b> 24,000 сўм
     `.trim()
 
     // Send message to Telegram
