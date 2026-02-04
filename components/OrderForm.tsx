@@ -103,7 +103,7 @@ export default function OrderForm() {
       </h2>
       
       {/* Product Image */}
-      <div className="text-center mb-4">
+      <div className="text-center mb-4 flex flex-col items-center">
         <button 
           onClick={() => setIsModalOpen(true)}
           className="cursor-pointer hover:scale-105 transition-transform focus:outline-none"
