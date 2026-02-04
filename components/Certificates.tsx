@@ -1,84 +1,42 @@
 "use client"
 
-import { useEffect, useState } from 'react'
-
-type Variant = 'light' | 'dark'
 
 const certificates = [
   { id: '1', label: 'Сертификат 1', href: '/sertificate/product1.pdf' },
   { id: '2', label: 'Сертификат 2', href: '/sertificate/product2.pdf' }
 ]
 
-export default function Certificates({ variant = 'light', className = '' }: { variant?: Variant; className?: string }) {
-  const [active, setActive] = useState<(typeof certificates)[number] | null>(null)
-
-  useEffect(() => {
-    if (!active) return
-    const previousOverflow = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
-    return () => {
-      document.body.style.overflow = previousOverflow || 'unset'
-    }
-  }, [active])
-
+export default function Certificates({ variant = 'light', className = '' }: { variant?: 'light' | 'dark'; className?: string }) {
   const labelClass = variant === 'dark' ? 'text-white/90' : 'text-gray-700'
-  const buttonClass =
-    variant === 'dark'
-      ? 'border-white/50 bg-white/10 text-white hover:bg-white/20'
-      : 'border-gray-300 bg-white text-gray-700 hover:bg-gray-50'
 
   return (
-    <div className={`flex flex-col items-center gap-3 ${className}`}>
+    <div className={`flex flex-col items-center gap-3 w-full ${className}`}>
       <p className={`text-sm font-semibold ${labelClass}`}>Сертификатлар</p>
-      <div className="flex flex-wrap justify-center gap-3">
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-2xl">
         {certificates.map((cert) => (
-          <button
-            key={cert.id}
-            type="button"
-            onClick={() => setActive(cert)}
-            className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium shadow-sm transition-colors ${buttonClass}`}
-          >
-            {cert.label}
-          </button>
+          <div key={cert.id} className="relative w-full h-60 bg-gray-100 rounded-lg overflow-hidden border border-gray-200 shadow-sm group">
+            <iframe
+              src={`${cert.href}#toolbar=0&navpanes=0&scrollbar=0&view=Fit`}
+              title={cert.label}
+              className="w-full h-full"
+              loading="lazy"
+            />
+            {/* Optional: Overlay to allow clicking to open in full if needed, or just let them read directly */}
+            <a 
+              href={cert.href} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="absolute top-2 right-2 p-2 bg-white/80 rounded-full shadow-sm hover:bg-white transition-colors opacity-0 group-hover:opacity-100"
+              title="Kattalashtirish"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 text-gray-700">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h-4.5m4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+              </svg>
+            </a>
+          </div>
         ))}
       </div>
-
-      {active && (
-        <div
-          className="fixed inset-0 z-[110] flex items-center justify-center p-4"
-          onClick={() => setActive(null)}
-          role="dialog"
-          aria-modal="true"
-        >
-          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
-          <div
-            className="relative w-full max-w-5xl h-[85vh] bg-white rounded-xl shadow-2xl overflow-hidden"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              type="button"
-              onClick={() => setActive(null)}
-              className="absolute top-3 right-3 z-10 inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/10 text-gray-700 hover:bg-black/20"
-              aria-label="Yopish"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                className="h-5 w-5"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            <iframe
-              src={active.href}
-              title={active.label}
-              className="h-full w-full"
-            />
-          </div>
-        </div>
-      )}
     </div>
   )
 }
