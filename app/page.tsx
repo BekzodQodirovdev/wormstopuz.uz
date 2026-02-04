@@ -44,7 +44,7 @@ export default function Home() {
               <div className="bg-gray-50 p-6 rounded-lg mb-8 italic text-gray-700 border-l-4 border-gray-400">
                 <p>
                   <strong className="text-gray-900 not-italic block mb-2">Таҳририятдан:</strong> 
-                  Папиллома вируси (ОПВ) ва паразитлар ўртасидаги боғлиқлик илк бор исботланди. Бугун студиямизда жаҳонга машҳур паразитолог, Женева Паразитология Институти раҳбари — Kamola Yusupova. У нима учун дорихонадаги дорилар энди таъсир қилмаслигини тушунтириб беради.
+                  Папиллома вируси (ОПВ) ва паразитлар ўртасидаги боғлиқлик илк бор исботланди. Бугун студиямизда жаҳонга машҳур паразитолог, Е.И Марциновский институти раҳбари — Kamola Yusupova. У нима учун дорихонадаги дорилар энди таъсир қилмаслигини тушунтириб беради.
                 </p>
               </div>
 
@@ -222,7 +222,7 @@ export default function Home() {
               <div id="order" className="mt-12 container mx-auto bg-white rounded-xl p-4 md:p-8 border border-gray-200 shadow-sm" role="region" aria-labelledby="order-form-heading">
                 <div className="text-center mb-6">
                   <h3 id="order-form-heading" className="text-2xl font-bold text-green-700">РАСМИЙ БУЮРТМА ОЙНАСИ</h3>
-                  <p className="text-sm text-gray-600">Швейцария сифати. Ўзбекистон бўйлаб етказиб бериш.</p>
+                  <p className="text-sm text-gray-600">Россия сифати. Ўзбекистон бўйлаб етказиб бериш.</p>
                   
                   {/* Trust Badges */}
                   <div className="flex justify-center gap-6 my-6">
