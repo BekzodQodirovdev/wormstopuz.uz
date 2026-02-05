@@ -46,6 +46,22 @@ export default function OrderForm() {
     setIsSubmitting(true)
     setSubmitStatus({ type: null, message: '' })
 
+    // Check for rate limiting (30 minutes)
+    const lastOrderTime = localStorage.getItem('last_order_time')
+    if (lastOrderTime) {
+      const timeSinceLastOrder = Date.now() - parseInt(lastOrderTime)
+      const thirtyMinutes = 30 * 60 * 1000
+
+      if (timeSinceLastOrder < thirtyMinutes) {
+        setSubmitStatus({
+          type: 'success',
+          message: 'Сиз билан тез орада боғланамиз',
+        })
+        setIsSubmitting(false)
+        return
+      }
+    }
+
     // Get stop value from URL or localStorage
     const storedStop = localStorage.getItem('wormstop_stop_param')
     const finalStop = queryStopParam || storedStop
@@ -68,6 +84,9 @@ export default function OrderForm() {
       if (!response.ok) {
         throw new Error(data.error || 'Xatolik yuz berdi')
       }
+
+      // Save submission time
+      localStorage.setItem('last_order_time', Date.now().toString())
 
       setSubmitStatus({
         type: 'success',
